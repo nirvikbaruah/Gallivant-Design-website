@@ -1,0 +1,1042 @@
+@font-face {
+    font-family: "BigJohn";
+    src: url("bigjohn.otf");
+}
+
+
+@font-face {
+    font-family: "Axis";
+    src: url("axis.otf");
+}
+
+@font-face {
+    font-family: 'Museo';
+    src: url('museo.otf');
+}
+
+@font-face {
+    font-family: "Adam";
+    src: url("adam.otf");
+}
+
+@font-face {
+    font-family: "Nexa";
+    src: url("nexa.otf");
+}
+
+@font-face {
+    font-family: 'NexaRust';
+    src: url('nexarust.otf');
+}
+
+
+html {
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    padding: 0;
+    font-family: 'open sans';
+    position: relative;
+    margin: 0;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*{
+    -webkit-overflow-scrolling: touch;
+}
+
+.wrapper {
+    height: 100% !important;
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+}
+
+nav{
+    position: fixed;
+}
+
+#homePage{
+    background: white;
+    z-index:10;
+}
+
+.fancyNav nav, .menuPage nav{
+    height: 80px;
+    background: white;
+    border: none;
+}
+
+.navbar .nav > li > a {
+    color:  black;
+    transition: color 3s;
+    -webkit-transition: color .3s;
+}
+
+.button{
+    position: relative;
+    min-width: 15%;
+    height: 50px;
+    border: 3px solid #ff4040;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ff4040;
+    text-align: center;
+    display: table;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    cursor: pointer;
+    transition: color .3s, background .3s;
+    -webkit-transition: color .3s, background .3s;
+    padding: 20px;
+}
+
+.button h5{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.footerWrapper{
+    margin-bottom: 50px;
+    width: auto;
+    height: auto;
+}
+
+#footer{
+    width: 100%;
+    height: 180px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    background: #2A2A2A;
+    color: white;
+    font-family: "open sans";
+    overflow: hidden;
+}
+
+#footer h3{
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    font-weight: 600;
+    color: white;
+    font-size: 32.5px;
+}
+
+#footer ul.footerNav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+#footer a{
+    color: white;
+}
+
+#footer ul#navOne{
+    left: 20%;
+}
+
+#footer ul#navTwo{
+    left: 45%;
+}
+
+
+#footer li{
+    font-weight: 600;
+    margin: 20%;
+    white-space: nowrap;
+    list-style: none;
+}
+
+#footer #socialIcons{
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    height: 100%;
+}
+
+#footer #socialIcons #logo{
+    position: relative;
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    font-family: "museo";
+}
+
+#footer #socialIcons li{
+    display: inline;
+    margin: 22.5px;
+}
+
+#footer #socialIcons li img{
+    width: 20px;
+}
+
+
+.fancyNav .nav li{
+    position: relative;
+    margin-top: 24px;
+    margin-right: 40px;
+    left: 20%;
+}
+
+.fancyNav .nav li:last-child{
+    text-transform: uppercase;
+    margin-left: 45px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 2px solid black;
+    background: white;
+    color: black;
+    transition: color .7s, background .7s, border .7s;
+    -webkit-transition: color .7s, background .7s, border .7s;
+}
+
+#slideoutNav{
+    position: fixed !important;
+    top: 0px;
+    height: 100%;
+    width: 250px;
+    right: -250px;
+    background: #ff4040;
+    z-index: 10000;
+    opacity: 0.9;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+#slideoutNav #closeMenu{
+    width: 20px;
+    height: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Axis";
+    font-size: 20px;
+    -webkit-transform-origin:50% 58%;
+    -moz-transform-origin:50% 58%;
+    -ms-transform-origin:50% 58%;
+    -o-transform-origin:50% 58%;
+    transform-origin: 50% 58%;
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+
+#closeMenu:hover  
+{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+}  
+
+#slideoutNav li{
+    display: block;
+    list-style: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#slideoutNav li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+}
+
+#slideoutNav li a:hover{
+    color: black;
+}
+
+.navbar .nav > li > a:hover{
+    color:  #ff4040;
+}
+
+.navbar .nav > li:last-child > a:hover{
+    color:  white;
+}
+
+.fancyNav .nav li:last-child:hover{
+    background: #ff4040;
+}
+
+.fancyNav .nav li:last-child:hover{
+    border: 2px solid #ff4040;
+}
+
+
+.fancyNav nav .navbar-brand, .menuPage nav .navbar-brand{
+    margin-top: 20px;
+    font-size: 30px;
+    color: #ff4040;
+}
+
+.fancyNav nav .navbar-toggle{
+    margin-top: 30px;
+}
+
+.fancyNav nav .navbar-collapse{
+    background: white;
+}
+
+#banner{
+    width: 100%;
+    height: auto;
+    background: #ff4040;
+    padding: 55px;
+    max-height: 300px;
+    margin: 0;
+}
+
+#banner h1{
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    font-family: "Museo";
+}
+
+#banner .enhance, #workPage .button .enhance{
+    display: inline;
+    color: black;
+    margin-bottom: 0px;
+}
+
+#homePage .wrapper{
+    position: relative;
+    margin-top: -40px;
+}
+
+#homePage .about{
+    margin: 4%;
+    text-align: center;
+}
+
+#homePage .about h3{
+    font-weight: 600;
+}
+
+#homePage .about p{
+    margin-left: 5px;
+}
+
+#homePage .about .enhance, #aboutPage .enhance{
+    font-weight: 600;
+    color: #ff4040;
+}
+
+
+
+#aboutPage{
+    background: white;
+    z-index:7;
+    background-image: url("shophouse.jpg");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+#mainNav .navbar-brand{
+    color: #ff4040;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+#mainNav{
+    top: 0;
+    background: white;
+    border: none;
+    position: absolute;
+}
+
+#mainNav .navbar-header, .menuPage nav .navbar-header{
+    width: 100%;
+}
+
+#mainNav img, .menuPage nav img{
+    position: absolute;
+    height: 25px;
+    top: 50%;
+    margin-top: -12.5px;
+    left: 85%;
+    cursor: pointer;
+}
+
+#aboutPage h1{
+    position: absolute;
+    top: 54%;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#aboutPage h2{
+    text-align: center;
+    margin-top: 110px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#aboutPage hr{
+    position: absolute;
+    top: 103px;
+    color: grey;
+    background-color: grey;
+    height: 1px;
+    width: 17%;
+}
+
+#aboutPage hr:nth-of-type(1){
+    left: 3.12%;
+}
+
+#aboutPage hr:nth-of-type(2){
+    right: 3.12%;
+}
+
+#aboutPage .wrapper{
+    width: 130px;
+    height: 250px;
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    right: 1%;
+}
+
+#aboutPage .wrapper h2{
+    position: relative;
+    font-size: 30px;
+    margin-top: 160px;
+}
+
+#aboutPage .wrapper img{
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+}
+
+#aboutPage .wrapper:nth-of-type(1){
+    left: 1%;
+}
+
+
+#aboutBox{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    margin-top: 20px;
+    left: 50%;
+    border: 2.5px solid black;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    background: white;
+}
+
+#aboutPage p{
+    position: absolute;
+    color: black;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+}
+
+
+
+#workPage{
+    background: white;
+    z-index:5;
+}
+
+#workPage h1{
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 28px;
+}
+
+#workPage p{
+    position: relative;
+    margin-top: 20px;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    text-align: justify;
+}
+
+#workPage .button{
+    margin-top: 25px;
+}
+
+#workPage .button:hover{
+    color: white;
+    background: #ff4040;
+}
+
+#workPage .enhance{
+    color: black;
+}
+
+#workPage img#rocketLaunch{
+    position: relative;
+    width: 95%;
+    margin-top: 0px;
+    left: 0;
+}
+
+
+#portfolio h1, h3{
+    text-align: center;
+    color: black;
+}
+
+#portfolio h1, #contact h1{
+    font-size: 30px;
+    margin-top: 25px;
+    font-weight: 300;
+}
+
+#portfolio hr, #contact hr{
+    width: 50px;
+    height: 1px;
+    background: black;
+}
+
+#portfolio h3{
+    font-size: 20px;
+    margin-top: 10px; 
+    margin-bottom: 15px;
+}
+
+#portfolio .wrapper{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#portfolio .workBox{
+    position: relative;
+    height: 70%;
+    margin: 6px;
+    width: 32%;
+    display: inline-block;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#portfolio .type{
+    position: absolute;
+    width: 70px;
+    height: 24px;
+    bottom: 6px;
+    left: 7px;
+    z-index: 4500;
+    text-align: center;
+    display: block;
+    background: #f2f3f4;
+    font-family: "Museo";
+    font-size: 13px;
+}
+
+#portfolio .type *{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#portfolio .html{
+    border-bottom: 4px solid #71bc78;
+}
+
+#portfolio .css{
+    border-bottom: 4px solid #e4717a;
+}
+
+#portfolio .graphics{
+    border-bottom: 4px solid #ff4040;
+}
+
+#portfolio .javascript{
+    border-bottom: 4px solid #21abcd;
+}
+
+#portfolio .workBox div:nth-of-type(3){
+    left: 84px;
+}
+
+#portfolio .workBox div:nth-of-type(4){
+    left: 161px;
+}
+
+#portfolio .view{
+    position: absolute;
+    width: 150px;
+    height: 24px;
+    background: #f2f3f4;
+    color: #232323;
+    bottom: 6px;
+    right: 7px;
+    z-index: 5000;
+    display: table;
+    padding: 0;
+    text-align: center;
+}
+
+#portfolio .view h4{
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-family: "Museo";
+    font-size: 12px;
+    margin: 0;
+}
+
+#portfolio img{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -20px;
+}
+
+#portfolio #tharavaad img{
+    top: -100px;
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+#portfolio .diagonal{
+    position: absolute;
+    width: 110%;
+    height: 200px;
+    left: -5%;
+    top: 73%;
+    opacity: 0.9;
+    outline: 2px dotted white;
+    background: #232323;
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Safari */
+    transform: rotate(-7deg);
+    z-index: 6;
+}
+
+#portfolio .diagonal h1{
+    color: white;
+    position: absolute;
+    top: -10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+#contact h1{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+
+
+#contact .wrapper{
+    position: absolute;
+    top: 180px;
+    left: 20%;
+    min-width: 20%;
+    height: 80%;
+}
+
+
+#contact img#emailus{
+    position: fixed;
+    width: 35%;
+    left: 50%;
+    top: 35%;
+}
+
+#contact .wrapper .companyMember{
+    position: relative;
+    min-height: 20%;
+}
+
+#contact .wrapper .companyMember *{
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+}
+
+#contact .wrapper .companyMember h4{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#contact .wrapper .companyMember h5{
+    font-size: 16px;
+    color: grey;
+    font-weight: 600;
+}
+
+#contact .wrapper .companyMember p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#contact .wrapper .companyMember a{
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+#contact .wrapper .companyMember .enhance, #portfolio .enhance, #contact .enhance{
+    color: #ff4040;
+    display: inline;
+}
+
+#careers{
+    background-image: url(careerback.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+#careers nav{
+    background: transparent;
+}
+
+#careers .titleWrapper{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+}
+
+#careers h1{
+    font-family: "NexaRust";
+    font-size: 110px; 
+}
+
+#careers h4{
+    font-family: "Nexa";
+    font-size: 60px; 
+    margin-top: -30px;
+}
+
+#careers p{
+    text-align: center;
+    margin: 30px;
+}
+
+#careers h2{
+    font-family: "Adam";
+    font-size: 80px; 
+    margin-top: -13px;
+}
+
+#careers #openPos{
+    width: 60%;
+    height: 10%;
+    position: absolute;
+    overflow: hidden;
+    top: 28%;
+    left: -60%;
+    background: #ff4040;
+    opacity: 0.9;
+}
+
+#careers #openPos *{
+    opacity: 1;
+    color: white;
+}
+
+#careers #openPos h3{
+    text-align: center;
+    font-family: "Nexa";
+    font-size: 30px;
+}
+
+#construction{
+    max-height: 100%;
+}
+
+#construction .wrapper{
+    position: relative;
+    top: 20%;
+    left: 50%;
+    max-height: 75%;
+    text-align: center;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+#construction .wrapper h1{
+    text-transform: uppercase;
+    font-family: "BigJohn";
+    color: white;
+    text-shadow:
+   -1px -1px 0 #ff4040,  
+    1px -1px 0 #ff4040,
+    -1px 1px 0 #ff4040,
+     1px 1px 0 #ff4040;
+}
+
+#construction #companyName{
+    font-family: 'Playball', cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+@media (min-width: 1300px) {
+    .button{
+        height: 7.4%;
+    }
+    #banner{
+        max-height: 45%;
+    }
+
+    #banner h1{
+        position: relative;
+        color: white;
+        text-align: center;
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 0px;
+        font-family: "Museo";
+    }
+
+    #homePage .about h3{
+        font-size: 30px;
+    }
+
+    #homePage .about p{
+        font-size: 20px;
+    }
+    .fancyNav nav{
+        height: 120px;
+    }
+    .fancyNav .nav li{
+        font-size: 20px;
+        margin-top: 50px;
+        margin-right: 45px;
+        left: 15%;
+    }
+
+    .fancyNav .nav li:last-child{
+        font-size: 17px;
+    }
+    .fancyNav nav .navbar-brand, .menuPage nav .navbar-brand{
+        font-size: 50px;
+        margin-top: 45px;
+        position: absolute;
+        left: 10%;
+    }
+
+
+    #workPage h1{
+        font-size: 35px;
+    }
+
+    #workPage p{
+        margin-top: 35px;
+        font-size: 20px;
+    }
+
+    #workPage .button h5{
+        font-size: 20px;
+    }
+    #footer{
+        position: absolute;
+        height: 26.55%;
+    }
+    #footer h3{
+        font-size: 350%;
+    }
+    #footer li{
+        font-size: 150%;
+    }
+
+    #footer #socialIcons li{
+        display: inline;
+        margin: 7%;
+    }
+
+    #footer #socialIcons li img{
+        width: 10%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .fancyNav #slideoutNav{
+        visibility: visible;
+    }
+    #aboutPage hr{
+        width: 180px;
+    }
+
+    #workPage .post{
+        left: 50%;
+        width: 40%;
+        margin-left: -20%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1150px){
+    #banner h1{
+        font-size: 40px;
+    }
+    #aboutPage hr{
+        width: 120px;
+    }
+    #portfolio .wrapper{
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+    #portfolio .workBox{
+        position: relative;
+        background: #ff4040;
+        height: 70%;
+        margin: 6px;
+        width: 40%;
+        display: inline-block;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 950px){
+    #banner h1{
+        font-size: 30px;
+    }
+
+    #homePage .wrapper{
+        margin-top: -20px;
+    }
+    #aboutPage hr{
+        display: none;
+    }
+    #aboutPage .wrapper{
+        display: none;
+    }
+    #mainNav nav img, .menuPage nav img{
+        left: 75%;
+    }
+    #contact img#emailus{
+        display: none;
+    }
+    #contact .wrapper .companyMember *{
+        text-align: center;
+    }
+    #contact .wrapper{
+        width: 100%;
+        left: 0;
+    }
+    #footer h3{
+        display: none;
+    }
+    #footer ul#navOne{
+        left: 2.5%;
+    }
+    #footer ul#navTwo{
+        left: 75%;
+    }
+    #footer ul#socialIcons{
+        left: 30%;
+    }
+    #portfolio .workBox{
+        display: block;
+        width: 60%;
+        left: 20%;
+        margin-left: 0;
+    }
+}
+
+
+@media(max-width: 675px){
+    #workPage #rocketLaunch{
+        visibility: hidden;
+    }
+    #workPage p{
+        width: 75%;
+        left: 50%;
+        margin-left: -37.5%;
+    }
+    #workPage .wrapper{
+        width: 100%;
+    }
+    #footer ul#navOne{
+        left: 2.5%;
+    }
+    #footer ul#navTwo{
+        left: 40%;
+    }
+    #footer ul#socialIcons{
+        display: none;
+    }
+    #portfolio .workBox{
+        width: 80%;
+        left: 10%;
+    }
+
+}
+
+
+
+@media (max-width: 450px){
+    #banner h1{
+        font-size: 25px;
+    }
+    #portfolio .workBox{
+        width: 90%;
+        left: 5%;
+    }
+}
+
+.navbar .navbar-brand:hover, 
+.navbar .navbar-brand:focus {
+  background-color: transparent;
+  color: #ff4040;
+}

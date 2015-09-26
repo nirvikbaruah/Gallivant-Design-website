@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Gallivant Design</title>
+        <meta name='description' content="Gallivant design is a website design and digital services team operating from Singapore, delivering innovative and excellently functional designs and solutions.">
+        <meta name="keywords" content="websites, buisness, fast, quick, design, Singapore, graphics, creative, fresh, innovative">
+        <meta name="author" content="Gallivant Design">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+        <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/11042242_1076401212385328_620736710_n.jpg?oh=ca62d80d2d226220fc0113d81012d810&oe=54FE3635&__gda__=1426031333_c876ebb5a6798a07e3ba8109e40483ef" type="image/x-icon">
+        <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href = "style.css" rel = "stylesheet">
+    </head>
+    <body class = "fancyNav">
+
+        <script>
+            var count = 0;
+                $(document).ready(function(){
+
+                    function is_touch_device() {
+                      return 'ontouchstart' in window // works on most browsers 
+                          || 'onmsgesturechange' in window; // works on ie10
+                    };
+
+                    if(is_touch_device()){
+                        responsive = screen.width + 10;
+                        $('body').append("<style type='text/css'>@media(max-width: " +  responsive + 'px' +"){ #aboutPage nav{display: none;}.slide{ position: relative!important;height: auto !important;min-height: 100% !important;}#slideoutNav{position: fixed !important;}#workPage .teamGrid{width: 100%;}#workPage .teamGrid .teamMember{position: relative;width: 200px;height: 200px;margin: 4%;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);left: 0;display: inline-block;border: 2px dotted black;} }</style>");
+                        $(".main").onepage_scroll({
+	                        sectionContainer: ".slide",
+	                        responsiveFallback: 5000,  
+	                        loop: false
+	                    });
+                    }
+                    else{
+                        $('body').append("<style type='text/css'>@media(max-width: 1000px){ #aboutPage nav{display: none;}.slide{ position: relative!important;height: auto !important;min-height: 100% !important;}#slideoutNav{position: fixed !important;}#workPage .teamGrid{width: 100%;}#workPage .teamGrid .teamMember{position: relative;width: 200px;height: 200px;margin: 4%;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);left: 0;display: inline-block;border: 2px dotted black;} }</style>");
+                        $(".main").onepage_scroll({
+	                        sectionContainer: ".slide",
+	                        responsiveFallback: 1000,  
+	                        loop: false
+	                    });
+                    }
+
+                });
+                
+              function slideMenu(){
+                backHome();
+                $("#slideoutNav").css("right", 0);
+              }
+              function closeMenu(){
+                $("#slideoutNav").css("right", "-250px");
+              }
+              function backHome(){
+                if($(window).width() > 800){
+                }
+                else{
+                    window.scrollTo(0, 0);
+                }
+              }
+
+                (function(){
+                  var words = [
+                      '动力',
+                      'мощность',
+                      'kuasa',
+                      'power'
+                      ], i = 0;
+                  setInterval(function(){
+                      $('#wordchange').fadeOut(function(){
+                          $(this).html(words[i=(i+1)%words.length]).fadeIn();
+                      });
+                  }, 2000);
+                    
+              })();
+            
+        </script>
+
+        <div id = "slideoutNav">
+
+            <div id = "closeMenu" onclick="closeMenu()"><span>X</span></div>
+
+            <ul>
+                <li>
+                    <a href='careers.html'>Careers</a>
+                </li>
+                <li>
+                    <a href='portfolio.html'>Portfolio</a>
+                </li>
+                <li>
+                    <a href='index.html'>Philosophy</a>
+                </li>
+                <li>
+                    <a href='contact.html'>Contact Us</a>
+                </li>
+                <li>
+                    <a href='mailto:info@gallivantdesign.com'>Take the first step</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="main">
+
+                <section id="homePage" class="slide">
+                    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" onclick = "slideMenu()">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">GLVT</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a></a>
+                                    </li>
+                                    <li>
+                                        <a href='careers.html'>Careers</a>
+                                    </li>
+                                    <li>
+                                        <a href='portfolio.html'>Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href='index.html'>Philosophy</a>
+                                    </li>
+                                    <li>
+                                        <a href='contact.html'>Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href='mailto:info@gallivantdesign.com'>Take the first step</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                    </nav>
+
+                    <div id = "banner"><h1>An agency that delivers Website Design & <br>Digital Services with <span class = "enhance" id = "wordchange">power</span>.</h1></div>
+
+
+                    <div class = "wrapper">
+
+                        <div class = "about col-sm-3 col-md-3">
+                            <h3>Perspective.</h3>
+                            <p>As a group of students living in one of the most multicultural cities in the world, we <span class = "enhance">redefine</span> perspective in the webosphere. Not only do we constantly strive to learn more about the tricks of the trade, but we also retain the crux of our purpose: Delivering <span class = "enhance">creativity</span> within the barriers of functionality and professionalism. Our perspective is a collation of <span class = "enhance">cultures, experiences</span> and <span class = "enhance">opinions</span> that guides the basis of all our design.</p>
+
+                        </div>
+                        <div class = "about col-sm-3 col-md-3">
+                            <h3>Communication.</h3>
+                            <p>As technology becomes more and more prevalent, the need for a newer, more creative and <span class = "enhance">unique</span> website rivals that of businesses themselves. For us, creativity is imperative but it must be adapted to suit the <span class = "enhance">e-persona</span> of websites. Each client, wants and needs a different website: We make it our goal to work closely with clients, qualify their ideas and create a website that exudes <span class = "enhance">their personality</span>.</p>
+
+                        </div>
+                        <div class = "about col-sm-3 col-md-3">
+                            <h3>Perfection.</h3>
+                            <p>We believe that no project is completed until it is to our client's exact needs, regardless of the time frame, and by putting the <span class = "enhance">quality</span> of the website and the satisfaction of our clients first, we constantly <span class = "enhance">deliver</span> high quality products. This is the core, underlying belief that our team follows and fuels our <span class = "enhance">dedication</span> towards each and every task.
+                        	</p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <section id="aboutPage" class="slide">
+                    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id = "mainNav">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <img class="menuicon" src = "menuicon.gif" onclick = "slideMenu()" alt = "menu button">
+                                <a class="navbar-brand" href="#" onclick = "backHome()">GLVT</a>
+                            </div>
+
+                        </div>
+                        <!-- /.container -->
+                    </nav>
+
+                    <hr><h2>Launching your <span class = "enhance">message</span> from Singapore, into the Webosphere</h2><hr>
+                    <div class = "wrapper">
+                        <img src = "tea.jpg">
+                        <h2>31</h2>
+                    </div>
+
+                    <div id = "aboutBox">
+                        <video width="100%" height="100%" poster="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10678822_1508445359404141_1149221289186624092_n.jpg?oh=ac93841ec2b4947922eaa79a57606e04&oe=55BF135A&__gda__=1438649325_d97a928460c42ff2ac1a391bbc0772c0" controls>
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class = "wrapper">
+                        <img src = "projects.jpg">
+                        <h2>4</h2>
+                    </div>
+
+
+                    <p>Shophouses by Widad Isml</p>
+
+                </section>
+
+                <section id="workPage" class="slide">
+
+                    <div class = "footerWrapper">
+                        <h1>"The success of any design lies within the details."</h1>
+                        <p>Our team consists of five dedicated partners who believe in the power of awe-inspiring web design. A good-looking website that's easy to use will automatically let you win over your target audience. Why? Because a good, clean website screams professional. It lets your audience know that you mean business. But don't just take our word for it, see the difference a good website makes by checking out:</p>
+
+                        <a href = "portfolio.html"><div class = "button"><h5><span class = "enhance">Our</span> Portfolio</h5></div></a>
+
+                        <img src = "rocketlaunch.png" id = "rocketLaunch">
+                    </div>
+
+         			<div id = "footer">
+
+                        <h3>GLVT</h3>
+
+                        <ul id = "navOne" class = "footerNav">
+
+                            <li><a href = "portfolio.html">Portfolio</a></li>
+                            <li><a href = "careers.html">Careers</a></li>
+
+                        </ul>
+
+                        <ul id = "navTwo" class = "footerNav">
+
+                            <li><a href = "contact.html">Contact</a></li>
+                            <li><a href = "index.html">Philosophy</a></li>
+
+                        </ul>
+
+                        <ul id = "socialIcons">
+
+                            <li><a href = "https://twitter.com/glvtdesign"><img src = "twitter.png"></a></li>
+                            <li><a href = "https://www.facebook.com/gallivantdesign"><img src = "facebook.png"></a></li>
+                            <li><a href = "https://plus.google.com/100783195176051374976/about"><img src = "google-plus.png"></a></li>
+                            <li><a href = "#"><img src = "instagram.png"></a></li>
+                            <li id = "logo">Gallivant Design, GLVT TM</li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                </section>
+
+            
+            </div>
+        </div>
+    </body>
+</html>
+
+
+

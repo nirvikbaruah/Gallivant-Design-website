@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--Nirvik Baruah 7th October 2014 /!-->
+<html>
+    <head>
+        <title>Gallivant Design</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,300italic' rel='stylesheet' type='text/css'>
+        <script src="dist/js/smooth-scroll.js"></script>   
+        <meta name='description' content="Gallivant design is a website design and digital services team operating from Singapore, delivering innovative and excellently functional designs and solutions.">
+        <meta name="keywords" content="websites, buisness, fast, quick, design, Singapore, graphics, creative, fresh, innovative">
+        <meta name="author" content="Gallivant Design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="icon" href="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/11042242_1076401212385328_620736710_n.jpg?oh=ca62d80d2d226220fc0113d81012d810&oe=54FE3635&__gda__=1426031333_c876ebb5a6798a07e3ba8109e40483ef" type="image/x-icon">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href = "style.css" rel = "stylesheet">
+    </head>
+    <body id = "careers" class = "menuPage">
+
+        <script>
+
+            function slideMenu(){
+                $("#slideoutNav").css("right", 0);
+            }
+            function closeMenu(){
+                $("#slideoutNav").css("right", "-250px");
+            }
+            function animateGrowDown(){
+                $("#openPos").css("height", "65%");
+            }
+            function animateSlideLeft(){
+                $("#openPos").css("left", "20%");
+                setTimeout(animateGrowDown, 1000);
+            }
+            function animateMoveTitle(){
+                $(".titleWrapper").css("top", "12%");
+                setTimeout(animateSlideLeft, 200);
+            }
+            function animateFont() {
+                $("h1").css("font-size", "80px");
+                $("h4").css("font-size", "30px");
+                $("h2").css("font-size", "50px");
+                setTimeout(animateMoveTitle, 900);
+            }
+            $(document).ready(function(){
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    $("#openPos").css("left", "20%");
+                    $("#openPos").css("height", "auto");
+                    $("#openPos").css("top", "35%");
+                    $(".titleWrapper").css("top", "20%");
+                    $("h1").css("font-size", "80px");
+                    $("h4").css("font-size", "30px");
+                    $("h2").css("font-size", "50px");
+                }
+                else{
+                    $('body').append("<style type='text/css'>#careers *{transition: all 1s;-webkit-transition: all 1s;}</style>");
+                    setTimeout(animateFont, 1000);
+                }
+            });
+        </script>
+
+       <nav class="navbar navbar-default navbar-fixed-top mainNav" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <img class="menuicon" src = "menuicon.gif" onclick = "slideMenu()" alt = "menu button">
+                    <a class="navbar-brand"  href='index.html'>GLVT</a>
+                </div>
+
+                <div id = "slideoutNav">
+
+                    <div id = "closeMenu" onclick="closeMenu()"><span>X</span></div>
+
+                        <ul>
+                            <li>
+                                <a  href='careers.html'>Careers</a>
+                            </li>
+                            <li>
+                                <a  href='portfolio.html'>Portfolio</a>
+                            </li>
+                            <li>
+                                <a  href='index.html#1'>Philosophy</a>
+                            </li>
+                            <li>
+                                <a  href='contact.html'>Contact Us</a>
+                            </li>
+                            <li>
+                                <a  href='mailto:info@gallivantdesign.com'>Take the first step</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            <!-- /.container -->
+        </nav>
+
+        <div class = "titleWrapper">
+            <h1>Careers</h1>
+            <h4>at</h4>
+            <h2>GLVT</h2>
+        </div>
+
+        <div id = "openPos">
+
+            <h3>Open Positions</h3>
+            <p>Sorry, but we currently have no open positions available.</p>
+
+        </div>
+
+        <!-- jQuery Version 1.11.1 -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+    </div>
+    </body>
+</html>
+
+
+
